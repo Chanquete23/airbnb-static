@@ -1,0 +1,45 @@
+---
+title: Le Wagon Middleman boilerplate
+---
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Airbnb team</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Leave those next 4 lines if you care about users using IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="team">
+      <div class="container text-center padded">
+        <h1>Our team</h1>
+        <ul class="list-inline">
+          <% ["bruno", "marco"].each do |name|%>
+            <li>
+              <h2><%= name %></h2>
+              <%= image_tag "#{name}.jpeg", class: "avatar-large" %>
+              <!--<img src="images/<%=name%>.jpeg" class="avatar-large" alt="">-->
+            </li>
+          <% end %>
+        </ul>
+        <h3 class="padded">
+          <a href=""><i class="fa fa-envelope"></i>contact@airbnb.com </a>
+        </h3>
+      </div>
+    </div>
+
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+  </body>
+</html>
